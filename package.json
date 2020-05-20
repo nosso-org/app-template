@@ -1,0 +1,55 @@
+{
+  "name": "nosso-org-app",
+  "version": "1.0.0",
+  "scripts": {
+    "rollup-watch": "rollup -c -w",
+    "rollup": "rollup -c",
+    "build": "run-s prettier routify rollup",
+    "dev": "routify -D -c rollup-watch",
+    "routify": "routify -Db",
+    "start": "sirv public --single",
+    "prettier": "prettier --write ./src"
+  },
+  "devDependencies": {
+    "@aws-amplify/api": "^3.1.10",
+    "@aws-amplify/auth": "^3.2.7",
+    "@aws-amplify/core": "^3.2.7",
+    "@aws-amplify/datastore": "^2.1.0",
+    "@fullhuman/postcss-purgecss": "^2.2.0",
+    "@rollup/plugin-alias": "^3.1.0",
+    "@rollup/plugin-commonjs": "11.0.2",
+    "@rollup/plugin-json": "^4.0.3",
+    "@rollup/plugin-node-resolve": "^7.0.0",
+    "@sveltech/routify": "^1.7.10",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^7.0.29",
+    "postcss-load-config": "^2.1.0",
+    "prettier": "^2.0.5",
+    "prettier-plugin-svelte": "^1.1.0",
+    "rollup": "^1.20.0",
+    "rollup-plugin-clear": "^2.0.7",
+    "rollup-plugin-livereload": "^1.0.0",
+    "rollup-plugin-svelte": "^5.0.3",
+    "rollup-plugin-terser": "^5.1.2",
+    "rollup-plugin-workbox-build": "^0.2.0",
+    "svelte": "^3.0.0",
+    "svelte-i18n": "^3.0.3",
+    "svelte-preprocess": "^3.7.4",
+    "tailwindcss": "^1.4.6"
+  },
+  "dependencies": {
+    "local-amplify": "nosso-org/local-amplify#v1.0.1",
+    "local_amplify": "github:nosso-org/local-amplify#v1.0.1",
+    "sirv-cli": "^0.4.4"
+  },
+  "prettier": {
+    "trailingComma": "es5",
+    "tabWidth": 4,
+    "semi": false,
+    "singleQuote": true,
+    "bracketSpacing": true,
+    "pluginSearchDirs": [
+      "./"
+    ]
+  }
+}
